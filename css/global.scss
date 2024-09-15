@@ -153,13 +153,12 @@ footer {
     @include tablet {
       padding-top: 24px;
       position: relative;
-        left: 45%;
-        transform: translate(-45%, 0);
-      
+      left: 45%;
+      transform: translate(-45%, 0);
     }
     @include mobile {
       padding-top: 24px;
-      
+
       display: flex;
       justify-content: space-between;
       padding-right: 140px;
@@ -282,7 +281,7 @@ footer {
   @include desktop-small {
     left: 8px;
   }
-  @include tablet{
+  @include tablet {
     padding-right: 0px;
     margin-right: 10px;
   }
@@ -324,7 +323,7 @@ footer {
     right: 20px;
     // padding-bottom: 32px;
     color: $secondary-color1;
-    @include tablet{
+    @include tablet {
       right: 0;
     }
     @include mobile {
@@ -362,7 +361,7 @@ footer {
     // @include tablet {
     //   display: none;
     // }
-    @include tablet{
+    @include tablet {
       // display: none;
       position: relative;
       right: 30px;
