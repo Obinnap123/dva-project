@@ -105,8 +105,8 @@ header .auth button {
   cursor: pointer;
 }
 header .auth button:hover {
-  background-color: hsl(233, 8%, 62%); /* Lighter background on hover */
   color: hsl(0, 0%, 100%);
+  opacity: 0.6;
 }
 header .auth button:active {
   background-color: hsl(233, 8%, 62%);
@@ -137,12 +137,22 @@ footer {
     padding: 18px 86px;
   }
 }
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 0;
+  }
+}
 @media (max-width: 420px) {
   footer {
     flex-direction: column;
     text-align: center;
     padding: 40px 0;
   }
+}
+footer .footer-div {
+  padding-top: 10px;
 }
 @media (max-width: 420px) {
   footer .footer-div {
@@ -154,23 +164,74 @@ footer .socials {
   gap: 12px;
   width: 50px;
   height: auto;
-  padding-top: 40px;
+  padding-top: 58px;
+}
+@media (max-width: 768px) {
+  footer .socials {
+    padding-top: 24px;
+    position: relative;
+    left: 45%;
+    transform: translate(-45%, 0);
+  }
 }
 @media (max-width: 420px) {
   footer .socials {
     padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 140px;
   }
 }
-footer .socials .facebook {
-  color: hsl(0, 0%, 100%);
+footer .socials .facebook .icon {
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s ease;
 }
-footer .socials .facebook:hover {
-  color: hsl(136, 65%, 51%);
+footer .socials .facebook:hover .icon {
+  fill: hsl(136, 65%, 51%);
+}
+footer .socials .youtube .icon {
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s ease;
+}
+footer .socials .youtube:hover .icon {
+  fill: hsl(136, 65%, 51%);
+}
+footer .socials .twitter .icon {
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s ease;
+}
+footer .socials .twitter:hover .icon {
+  fill: hsl(136, 65%, 51%);
+}
+footer .socials .pinterest .icon {
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s ease;
+}
+footer .socials .pinterest:hover .icon {
+  fill: hsl(136, 65%, 51%);
+}
+footer .socials .instagram .icon {
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s ease;
+}
+footer .socials .instagram:hover .icon {
+  fill: hsl(136, 65%, 51%);
 }
 footer .footer-ul-one {
   padding-right: 20px;
   line-height: 40px;
   font-size: 15px;
+}
+@media (max-width: 768px) {
+  footer .footer-ul-one {
+    padding-right: 0px;
+    padding-top: 22px;
+  }
 }
 @media (max-width: 420px) {
   footer .footer-ul-one {
@@ -211,6 +272,12 @@ footer .footer-ul-one li a:hover {
     left: 8px;
   }
 }
+@media (max-width: 768px) {
+  .footer-ul-two {
+    padding-right: 0px;
+    margin-right: 10px;
+  }
+}
 @media (max-width: 420px) {
   .footer-ul-two {
     padding-right: 0px;
@@ -245,6 +312,11 @@ footer .footer-ul-one li a:hover {
   right: 20px;
   color: hsl(233, 8%, 62%);
 }
+@media (max-width: 768px) {
+  .copy-right .footer-paragraph {
+    right: 0;
+  }
+}
 @media (max-width: 420px) {
   .copy-right .footer-paragraph {
     right: 0;
@@ -265,11 +337,18 @@ footer .footer-ul-one li a:hover {
   cursor: pointer;
 }
 .copy-right .auth button:hover {
-  background-color: hsl(233, 8%, 62%); /* Lighter background on hover */
   color: hsl(0, 0%, 100%);
+  opacity: 0.6;
 }
 .copy-right .auth button:active {
   background-color: hsl(233, 8%, 62%);
+}
+@media (max-width: 768px) {
+  .copy-right .auth {
+    position: relative;
+    right: 30px;
+    padding-top: 22px;
+  }
 }
 @media (max-width: 420px) {
   .copy-right .auth {
