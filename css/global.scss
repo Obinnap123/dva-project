@@ -1,0 +1,277 @@
+@use "../css" as *;
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+  font : {
+    family: $font-family;
+    size: $font-size;
+    weight: $font-weight2;
+  }
+}
+header {
+  & .navbar {
+    @include flex;
+    padding: 18px 140px;
+    @include desktop-small {
+      padding: 18px 100px;
+    }
+    @include tablet {
+      padding: 18px 64px;
+    }
+    @include mobile {
+      padding: 18px 24px;
+    }
+  }
+  ul {
+    @include flex;
+    gap: 18px;
+
+    font: {
+      size: 15px;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include mobile {
+      display: none;
+    }
+    li {
+      list-style: none;
+
+      & a {
+        text-decoration: none;
+        color: $secondary-color1;
+        position: relative;
+        &::after {
+          content: "";
+          height: 2px;
+          width: 100%;
+          background: $background-color;
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: -8px;
+          opacity: 0;
+        }
+        &:hover::after,
+        &:active::after {
+          opacity: 1;
+          transition: all 0.2s;
+          pointer-events: none;
+        }
+        &:visited {
+          color: $secondary-color1;
+        }
+        &:hover,
+        &:active {
+          color: black;
+        }
+      }
+    }
+    
+  }
+
+  .auth {
+    display: inline-block;
+    text-decoration: none;
+    font: {
+      size: 15px;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include mobile {
+      display: none;
+    }
+    button {
+      padding: 13px 32px;
+      border: none;
+      border-radius: 50px;
+      background: $background-color;
+      color: $secondary-color4;
+      cursor: pointer;
+
+      //   &:visited {
+      //     color: $secondary-color4;
+      //   }
+      &:hover {
+        background-color: $secondary-color1; /* Lighter background on hover */
+        color: $secondary-color4;
+      }
+      &:active {
+        background-color: $secondary-color1;
+      }
+    }
+    
+  }
+}
+.hamburger {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+  @include mobile {
+    display: block;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 125px 40px;
+  background-color: $primary-color1;
+  @include desktop-small {
+    padding: 18px 86px;
+  }
+  @include mobile {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 0;
+  }
+  // .logo{
+  //   background-color: $secondary-color4;
+  // }
+  .footer-div {
+    @include mobile {
+      margin: 0 auto;
+    }
+  }
+  .socials {
+    display: flex;
+    gap: 12px;
+    width: 50px;
+    height: auto;
+    padding-top: 40px;
+    // background-color: $secondary-color2;
+    @include mobile {
+      padding-top: 24px;
+    }
+    .facebook {
+      color: $secondary-color4;
+      &:hover {
+        color: $primary-color2;
+      }
+    }
+  }
+
+  .footer-ul-one {
+    padding-right: 20px;
+    line-height: 40px;
+    font: {
+      size: 15px;
+    }
+    @include mobile {
+      padding-right: 0px;
+      padding-top: 22px;
+    }
+    @include desktop-large {
+      position: relative;
+      right: 30px;
+    }
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $secondary-color4;
+        &:visited {
+          color: $secondary-color4;
+        }
+        &:hover {
+          color: $primary-color2;
+        }
+      }
+    }
+   
+  }
+}
+.footer-ul-two {
+  padding-right: 40px;
+  line-height: 40px;
+  margin-right: 50px;
+  font: {
+    size: 15px;
+  }
+  @include desktop-small {
+    left: 8px;
+  }
+  @include mobile {
+    padding-right: 0px;
+    margin-right: 10px;
+    right: 0;
+  }
+  @include desktop-large {
+    position: relative;
+    right: 70px;
+  }
+  position: relative;
+  right: 50px;
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: $secondary-color4;
+      &:visited {
+        color: $secondary-color4;
+      }
+      &:hover {
+        color: $primary-color2;
+      }
+    }
+  }
+ 
+}
+
+.copy-right {
+  // text-align: center;
+
+  .footer-paragraph {
+    font: {
+      size: 15px;
+    }
+    padding-top: 40px;
+    position: relative;
+    right: 20px;
+    // padding-bottom: 32px;
+    color: $secondary-color1;
+    @include mobile {
+      right: 0;
+    }
+  }
+
+  .auth {
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 60px;
+    font: {
+      size: 15px;
+    }
+
+    button {
+      padding: 13px 32px;
+      border: none;
+      border-radius: 50px;
+      background: $background-color;
+      color: $secondary-color4;
+      cursor: pointer;
+
+      //   &:visited {
+      //     color: $secondary-color4;
+      //   }
+      &:hover {
+        background-color: $secondary-color1; /* Lighter background on hover */
+        color: $secondary-color4;
+      }
+      &:active {
+        background-color: $secondary-color1;
+      }
+    }
+    // @include tablet {
+    //   display: none;
+    // }
+    @include mobile {
+      // display: none;
+      position: relative;
+      right: 30px;
+      padding-top: 22px;
+    }
+  }
+}

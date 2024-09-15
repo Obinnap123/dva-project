@@ -1,0 +1,23 @@
+$primary-color1: hsl(233, 26%, 24%);
+$primary-color2: hsl(136, 65%, 51%);
+$primary-color3: hsl(192, 70%, 51%);
+$secondary-color1: hsl(233, 8%, 62%);
+$secondary-color2: hsl(220, 16%, 96%);
+$secondary-color3: hsl(0, 0%, 98%);
+$secondary-color4: hsl(0, 0%, 100%);
+$background-color: linear-gradient(
+  90deg,
+  hsl(136, 65%, 51%),
+  hsl(192, 70%, 51%)
+);
+
+$font-size: 18px;
+$font-family: "Public Sans", sans-serif;
+$font-weight1: 300;
+$font-weight2: 400;
+$font-weight3: 700;
+//MEDIA QUERY
+$mobile: 420px;
+$tablet: 768px;
+$desktop-small: 1024px;
+$desktop-large: 1440px;

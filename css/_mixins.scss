@@ -1,0 +1,27 @@
+@mixin flex($direction: row, $justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    @content;
+}
+@mixin desktop-small {
+    @media (max-width: $desktop-small) {
+      @content;
+    }
+  }
+  @mixin desktop-large {
+    @media (min-width: $desktop-large) {
+        @content;
+    }
+  }
+  @mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+  }
+  @mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+  }
