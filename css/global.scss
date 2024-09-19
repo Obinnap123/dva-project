@@ -7,6 +7,24 @@ body {
     weight: $font-weight2;
   }
 }
+.wrapper {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media only screen and (max-width:1300px){
+    padding: 0;
+  }
+  @include desktop-small {
+    padding: 0;
+  }
+  @include mobile {
+    padding: 0;
+  }
+  @include desktop-large {
+    padding: 0;
+  }
+}
 header {
   & .navbar {
     @include flex;
@@ -43,13 +61,13 @@ header {
         position: relative;
         &::after {
           content: "";
-          height: 2px;
+          height: 3px;
           width: 100%;
           background: $background-color;
           display: block;
           position: absolute;
           left: 0;
-          bottom: -8px;
+          bottom: -30px;
           opacity: 0;
         }
         &:hover::after,
@@ -114,9 +132,12 @@ header {
 .hero-section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
+  // top: 50px;
   gap: 64px;
   background-color: $secondary-color3;
-padding-bottom: 140px;
+  padding-bottom: 140px;
   @include tablet {
     flex-direction: column;
     padding-bottom: 20px;
@@ -125,7 +146,7 @@ padding-bottom: 140px;
     flex-direction: column;
     // padding-bottom: 20px;
   }
-  @include desktop-large{
+  @include desktop-large {
     padding-bottom: 170px;
   }
   .hero-section-one {
@@ -261,6 +282,7 @@ padding-bottom: 140px;
     // bottom: -150px; /* Adjust to move it down */
     // // width: 200px; /* Adjust the size based on your design */
     z-index: 30;
+    top: 0px;
     //  position: absolute;
     // z-index: 10; /* A higher number to bring it on top */
     // // top: 0;      /* Adjust the position as needed */
@@ -277,6 +299,7 @@ padding-bottom: 140px;
     }
     @include desktop-large {
       width: 700px;
+      max-width: 100%;
     }
   }
   .mobile-image {
@@ -293,7 +316,11 @@ padding-bottom: 140px;
     }
   }
 }
-
+//  .hero-img{
+//   position: relative;
+//   max-width: 100%; /* Ensures the image doesn’t overflow the container */
+//   overflow: hidden;
+//  }
 .section-one {
   background-color: $secondary-color2;
   width: 100%;
@@ -306,41 +333,38 @@ padding-bottom: 140px;
   // width: 100%;
   // height: 400px; /* Adjust the height to match the layout */
   // position: relative;
-  @include desktop-small{
+  @include desktop-small {
     margin-top: -50px;
   }
-  @include tablet{
+  @include tablet {
     text-align: center;
     margin-top: 0;
-
   }
-  @include mobile{
+  @include mobile {
     text-align: center;
-
   }
   .easybank {
     padding-top: 100px;
     padding-left: 140px;
     padding-bottom: 50px;
-    @include desktop-small{
+    @include desktop-small {
       padding-top: 80px;
       padding-left: 70px;
     }
-    @include tablet{
+    @include tablet {
       padding: 50px 32px;
     }
-    @include mobile{
+    @include mobile {
       padding: 50px 32px;
     }
-    @include desktop-large{
+    @include desktop-large {
       padding-top: 110px;
     }
     h2 {
       font: {
         weight: $font-weight1;
       }
-      @include mobile{
-
+      @include mobile {
       }
     }
     p {
@@ -351,16 +375,15 @@ padding-bottom: 140px;
       padding-top: 24px;
       line-height: 1.5;
       color: $secondary-color1;
-      @include tablet{
+      @include tablet {
         width: 80%;
         margin: 0 auto;
-        
       }
-      @include mobile{
+      @include mobile {
         margin: 0;
         width: 100%;
       }
-      @include desktop-large{
+      @include desktop-large {
         width: 650px;
         font: {
           size: $font-size;
@@ -369,48 +392,45 @@ padding-bottom: 140px;
     }
   }
 
-  .section-one-div{
+  .section-one-div {
     display: flex;
     gap: 18px;
     padding: 0 140px;
-    @include desktop-small{
+    @include desktop-small {
       padding: 0 70px;
     }
-    @include tablet{
+    @include tablet {
       flex-direction: column;
       padding: 0 32px;
     }
-    @include mobile{
+    @include mobile {
       flex-direction: column;
       padding: 0 32px;
     }
-    img{
+    img {
       width: 20%;
     }
-    h2{
+    h2 {
       padding-top: 24px;
       font: {
         weight: $font-weight2;
         size: 18px;
       }
     }
-    p{
+    p {
       padding-top: 24px;
       font: {
         size: 14px;
       }
       color: $secondary-color1;
-      @include tablet{
+      @include tablet {
         width: 80%;
         margin: 0 auto;
-        
       }
-      @include mobile{
-        
+      @include mobile {
         margin: 0 auto;
-        
       }
-      @include desktop-large{
+      @include desktop-large {
         font: {
           size: $font-size;
         }
@@ -418,13 +438,218 @@ padding-bottom: 140px;
     }
   }
 }
+.section-two {
+  padding-top: 82px;
+  background-color: $secondary-color3;
+  h2 {
+    padding-left: 140px;
+    font: {
+      size: 35px;
+      weight: $font-weight2;
+    }
+    color: $primary-color1;
+    @include desktop-small{
+      padding-left: 70px;
+    }
+    @include mobile{
+      padding-left: 60px;
+    }
+    @include desktop-large{
+      font: {
+        size: 45px;
+      }
+    }
+  }
+
+  .card-section {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    padding: 48px 140px;
+    @include desktop-small{
+      padding: 48px 70px;
+    }
+
+    @include tablet{
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 32px;
+      gap: 0;
+    }
+    @include mobile{
+      flex-direction: column;
+      padding: 40px;
+      gap: 0px;
+    }
+    @include desktop-large {
+      gap: 35px;
+    }
+    .cards {
+      width: 300px;
+
+      height: fit-content;
+      // width: 100%;
+      // height: 100%;
+      // max-width: 373px;
+      // max-height: 455px;
+      // padding-bottom: 100px;
+      // flex:  22%; /* Make sure each card takes 22% of the container width */
+      // margin: 10px; /* Adjust the margins as needed */
+      // flex-shrink: 1;
+
+      // @include desktop-large {
+      //   // width: 50%;
+      //   // width: 100%;
+      //   // height: 100%;
+      //   // // max-width: 373px;
+      //   // max-height: 455px;
+      // }
+
+      // height: fit-content;
+      margin-bottom: 3rem;
+      // margin-left: 5px;
+
+      background-color: white;
+      border-radius: 5px;
+      // box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+      // @include desktop-large {
+      //   width: 400px;
+      // }
+      
+      @include desktop-small{
+        width: 500px;
+      }
+      @include tablet{
+        width: 337px;
+      }
+      
+      @include mobile{
+        width: 100%;
+        margin-bottom: 2rem;
+       }
+      img {
+        width: 100%;
+        height: 180px;
+        max-height: 455px;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        @include desktop-small{
+          width: 100%;
+          height: 150px;
+        }
+       @include tablet{
+        width: 100%;
+        height: 200px;
+       }
+       @include mobile{
+        width: 100%;
+        height: 100%;
+       }
+        @include desktop-large {
+          width: 100%;
+          height: 224px;
+          max-height: 455px;
+          border-top-right-radius: 6px;
+          border-top-left-radius: 6px;
+        }
+      }
+
+      .card-one-content {
+        // padding: 13px 22px 100px 13px;
+        // width: 50%;
+        padding: 22px;
+
+        // margin: 0 auto;
+        @include desktop-small{
+          padding: 11px;
+        }
+        @include mobile{
+          padding: 26px;
+        }
+        // @include mobile{
+        //   padding: 72px;
+        // }
+        @include desktop-large {
+          padding: 22px;
+        }
+        // small{
+        //   font: {
+        //     size: 10px;
+        //   }
+        // }
+        .paragraph-one {
+          padding-top: 10px;
+          font: {
+            size: 16px;
+            weight: $font-weight3;
+          }
+          color: $primary-color1;
+          &:hover {
+            color: $primary-color2;
+          }
+          cursor: pointer;
+        }
+        small,
+        .paragraph-two {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font: {
+            size: 10.7px;
+          }
+          width: 100%;
+          color: $secondary-color1;
+          
+          @include tablet{
+            font: {
+              size: 15px;
+            }
+          }
+          @include mobile{
+            font: {
+              size: 13px;
+            }
+          }
+          @include desktop-large {
+            width: 300px;
+            font: {
+              size: 13px;
+            }
+            width: 100%;
+          }
+        }
+      }
+
+      // .card-one-content{
+      //   padding: 22px;
+      //   .paragraph-two{
+      //     padding-top: 10px;
+      //     font: {
+      //       weight: $font-weight3;
+      //     }
+
+      //   }
+      //   .paragraph-three{
+      //     padding-top: 10px;
+      //   }
+      // }
+    }
+  }
+  //   .card-two{
+  //     .card-one-content{
+  // .paragraph-three{
+  // width: 110%;
+  // }
+  //     }
+  //   }
+}
+
 footer {
   display: flex;
   justify-content: space-between;
   padding: 32px 125px 40px;
   background-color: $primary-color1;
   @include desktop-small {
-    padding: 18px 86px;
+    padding: 18px 70px;
   }
   @include tablet {
     flex-direction: column;
@@ -461,7 +686,6 @@ footer {
       position: relative;
       left: 45%;
       transform: translate(-45%, 0);
-      
     }
     @include mobile {
       padding-top: 24px;
