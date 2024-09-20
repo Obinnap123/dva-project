@@ -398,7 +398,9 @@ header {
       text-align: center;
     }
     @include mobile {
-      padding-right: 70px;
+      padding-right: 40px;
+      position: relative;
+      right: 20px;
     }
     @include desktop-large {
       font: {
