@@ -106,6 +106,7 @@ header {
   @include tablet {
     display: block;
   }
+  cursor: pointer;
   // @include mobile {
   //   display: block;
   // }

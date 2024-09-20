@@ -141,6 +141,7 @@ header .auth button:active {
 
 .hamburger {
   display: none;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .hamburger {
