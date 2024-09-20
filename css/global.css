@@ -147,11 +147,6 @@ header .auth button:active {
     display: block;
   }
 }
-@media (max-width: 430px) {
-  .hamburger {
-    display: block;
-  }
-}
 
 .hero-section {
   display: flex;
@@ -197,9 +192,7 @@ header .auth button:active {
 }
 @media (max-width: 430px) {
   .hero-section .hero-section-one {
-    order: 2;
-    padding-top: 20px;
-    padding-left: 0;
+    padding-top: 40px;
   }
 }
 @media (min-width: 1440px) {
@@ -211,11 +204,6 @@ header .auth button:active {
   font-size: 45px;
   font-weight: 300;
   width: 450px;
-}
-@media (max-width: 1024px) {
-  .hero-section .hero-section-one h1 {
-    width: 450px;
-  }
 }
 @media (max-width: 768px) {
   .hero-section .hero-section-one h1 {
@@ -245,15 +233,6 @@ header .auth button:active {
   font-size: 15px;
   line-height: 22px;
   width: 380px;
-}
-@media (max-width: 430px) {
-  .hero-section .hero-section-one p {
-    width: 90%;
-    font-size: 14px;
-    text-align: center;
-    margin: 0 auto;
-    padding-bottom: 20px;
-  }
 }
 @media (max-width: 768px) {
   .hero-section .hero-section-one p {
@@ -285,56 +264,37 @@ header .auth button:active {
   }
 }
 @media (max-width: 430px) {
-  .hero-section .hero-section-one .auth {
-    display: block;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
   .hero-section .hero-section-one .auth button {
     padding: 13px 32px;
   }
 }
-.hero-section img {
+.hero-section .hero-img img {
   width: 600px;
   position: absolute;
-  right: 5px; /* Move it out slightly to the right */
+  right: 5px;
   z-index: 30;
   top: 0px;
 }
 @media (max-width: 1024px) {
-  .hero-section img {
+  .hero-section .hero-img img {
     width: 500px;
   }
 }
 @media (max-width: 768px) {
-  .hero-section img {
-    display: none;
-  }
-}
-@media (max-width: 430px) {
-  .hero-section img {
+  .hero-section .hero-img img {
     display: none;
   }
 }
 @media (min-width: 1440px) {
-  .hero-section img {
+  .hero-section .hero-img img {
     width: 700px;
-    max-width: 100%;
   }
 }
-.hero-section .mobile-image {
+.hero-section .hero-img .mobile-image {
   display: none;
 }
 @media (max-width: 768px) {
-  .hero-section .mobile-image {
-    display: block;
-    width: 100%;
-    order: 1;
-  }
-}
-@media (max-width: 430px) {
-  .hero-section .mobile-image {
+  .hero-section .hero-img .mobile-image {
     display: block;
     width: 100%;
     order: 1;
@@ -358,11 +318,6 @@ header .auth button:active {
     margin-top: 0;
   }
 }
-@media (max-width: 430px) {
-  .section-one {
-    text-align: center;
-  }
-}
 .section-one .easybank {
   padding-top: 100px;
   padding-left: 140px;
@@ -375,11 +330,6 @@ header .auth button:active {
   }
 }
 @media (max-width: 768px) {
-  .section-one .easybank {
-    padding: 50px 32px;
-  }
-}
-@media (max-width: 430px) {
   .section-one .easybank {
     padding: 50px 32px;
   }
@@ -433,12 +383,6 @@ header .auth button:active {
     padding: 0 32px;
   }
 }
-@media (max-width: 430px) {
-  .section-one .section-one-div {
-    flex-direction: column;
-    padding: 0 32px;
-  }
-}
 .section-one .section-one-div img {
   width: 20%;
 }
@@ -458,11 +402,6 @@ header .auth button:active {
     margin: 0 auto;
   }
 }
-@media (max-width: 430px) {
-  .section-one .section-one-div p {
-    margin: 0 auto;
-  }
-}
 @media (min-width: 1440px) {
   .section-one .section-one-div p {
     font-size: 18px;
@@ -472,6 +411,11 @@ header .auth button:active {
 .section-two {
   padding-top: 82px;
   background-color: hsl(0, 0%, 98%);
+}
+@media (max-width: 430px) {
+  .section-two {
+    padding-top: 42px;
+  }
 }
 .section-two h2 {
   padding-left: 140px;
@@ -484,9 +428,14 @@ header .auth button:active {
     padding-left: 70px;
   }
 }
+@media (max-width: 768px) {
+  .section-two h2 {
+    text-align: center;
+  }
+}
 @media (max-width: 430px) {
   .section-two h2 {
-    padding-left: 60px;
+    padding-right: 70px;
   }
 }
 @media (min-width: 1440px) {
@@ -516,8 +465,6 @@ header .auth button:active {
 @media (max-width: 430px) {
   .section-two .card-section {
     flex-direction: column;
-    padding: 40px;
-    gap: 0px;
   }
 }
 @media (min-width: 1440px) {
@@ -546,7 +493,7 @@ header .auth button:active {
 @media (max-width: 430px) {
   .section-two .card-section .cards {
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 32px;
   }
 }
 .section-two .card-section .cards img {
@@ -658,13 +605,6 @@ footer {
     padding: 40px 0;
   }
 }
-@media (max-width: 430px) {
-  footer {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 0;
-  }
-}
 footer .footer-div {
   padding-top: 10px;
 }
@@ -690,47 +630,22 @@ footer .socials {
 }
 @media (max-width: 430px) {
   footer .socials {
-    padding-top: 24px;
     padding-right: 140px;
   }
 }
-footer .socials .facebook .icon {
-  width: 24px;
-  height: 24px;
-  transition: fill 0.3s ease;
-}
-footer .socials .facebook:hover .icon {
-  fill: hsl(136, 65%, 51%);
-}
-footer .socials .youtube .icon {
-  width: 24px;
-  height: 24px;
-  transition: fill 0.3s ease;
-}
-footer .socials .youtube:hover .icon {
-  fill: hsl(136, 65%, 51%);
-}
-footer .socials .twitter .icon {
-  width: 24px;
-  height: 24px;
-  transition: fill 0.3s ease;
-}
-footer .socials .twitter:hover .icon {
-  fill: hsl(136, 65%, 51%);
-}
-footer .socials .pinterest .icon {
-  width: 24px;
-  height: 24px;
-  transition: fill 0.3s ease;
-}
-footer .socials .pinterest:hover .icon {
-  fill: hsl(136, 65%, 51%);
-}
+footer .socials .facebook .icon,
+footer .socials .youtube .icon,
+footer .socials .twitter .icon,
+footer .socials .pinterest .icon,
 footer .socials .instagram .icon {
   width: 24px;
   height: 24px;
   transition: fill 0.3s ease;
 }
+footer .socials .facebook:hover .icon,
+footer .socials .youtube:hover .icon,
+footer .socials .twitter:hover .icon,
+footer .socials .pinterest:hover .icon,
 footer .socials .instagram:hover .icon {
   fill: hsl(136, 65%, 51%);
 }
@@ -740,12 +655,6 @@ footer .footer-ul-one {
   font-size: 15px;
 }
 @media (max-width: 768px) {
-  footer .footer-ul-one {
-    padding-right: 0px;
-    padding-top: 22px;
-  }
-}
-@media (max-width: 430px) {
   footer .footer-ul-one {
     padding-right: 0px;
     padding-top: 22px;
@@ -770,8 +679,7 @@ footer .footer-ul-one li a:visited {
 footer .footer-ul-one li a:hover {
   color: hsl(136, 65%, 51%);
 }
-
-.footer-ul-two {
+footer .footer-ul-two {
   padding-right: 40px;
   line-height: 40px;
   margin-right: 50px;
@@ -780,44 +688,36 @@ footer .footer-ul-one li a:hover {
   right: 50px;
 }
 @media (max-width: 1024px) {
-  .footer-ul-two {
+  footer .footer-ul-two {
     left: 8px;
   }
 }
 @media (max-width: 768px) {
-  .footer-ul-two {
+  footer .footer-ul-two {
     padding-right: 0px;
     margin-right: 10px;
-  }
-}
-@media (max-width: 430px) {
-  .footer-ul-two {
-    padding-right: 0px;
-    margin-right: 10px;
-    right: 0;
   }
 }
 @media (min-width: 1440px) {
-  .footer-ul-two {
+  footer .footer-ul-two {
     position: relative;
     right: 70px;
   }
 }
-.footer-ul-two li {
+footer .footer-ul-two li {
   list-style: none;
 }
-.footer-ul-two li a {
+footer .footer-ul-two li a {
   text-decoration: none;
   color: hsl(0, 0%, 100%);
 }
-.footer-ul-two li a:visited {
+footer .footer-ul-two li a:visited {
   color: hsl(0, 0%, 100%);
 }
-.footer-ul-two li a:hover {
+footer .footer-ul-two li a:hover {
   color: hsl(136, 65%, 51%);
 }
-
-.copy-right .footer-paragraph {
+footer .copy-right .footer-paragraph {
   font-size: 15px;
   padding-top: 40px;
   position: relative;
@@ -825,22 +725,17 @@ footer .footer-ul-one li a:hover {
   color: hsl(233, 8%, 62%);
 }
 @media (max-width: 768px) {
-  .copy-right .footer-paragraph {
+  footer .copy-right .footer-paragraph {
     right: 0;
   }
 }
-@media (max-width: 430px) {
-  .copy-right .footer-paragraph {
-    right: 0;
-  }
-}
-.copy-right .auth {
+footer .copy-right .auth {
   display: inline-block;
   text-decoration: none;
-  padding-left: 60px;
   font-size: 15px;
+  padding-left: 60px;
 }
-.copy-right .auth button {
+footer .copy-right .auth button {
   padding: 13px 32px;
   border: none;
   border-radius: 50px;
@@ -848,22 +743,15 @@ footer .footer-ul-one li a:hover {
   color: hsl(0, 0%, 100%);
   cursor: pointer;
 }
-.copy-right .auth button:hover {
+footer .copy-right .auth button:hover {
   color: hsl(0, 0%, 100%);
   opacity: 0.6;
 }
-.copy-right .auth button:active {
+footer .copy-right .auth button:active {
   background-color: hsl(233, 8%, 62%);
 }
 @media (max-width: 768px) {
-  .copy-right .auth {
-    position: relative;
-    right: 30px;
-    padding-top: 22px;
-  }
-}
-@media (max-width: 430px) {
-  .copy-right .auth {
+  footer .copy-right .auth {
     position: relative;
     right: 30px;
     padding-top: 22px;
