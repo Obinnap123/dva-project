@@ -69,6 +69,11 @@ header .navLinks {
     display: none;
   }
 }
+@media (max-width: 430px) {
+  header .navLinks {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   header .navLinks.toggle {
     position: absolute;
