@@ -12,13 +12,10 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
-  @media only screen and (max-width: 1300px) {
+  @media (max-width: 1300px) {
     padding: 0;
   }
   @include desktop-small {
-    padding: 0;
-  }
-  @include mobile {
     padding: 0;
   }
   @include desktop-large {
@@ -27,12 +24,9 @@ body {
 }
 header {
   & .navbar {
-    position: relative;
-    z-index: 101;
     @include flex;
     padding: 18px 140px;
     position: relative;
-    z-index: 101;
     @include desktop-small {
       padding: 18px 70px;
     }
@@ -155,10 +149,6 @@ header {
       flex-direction: column;
       padding-bottom: 20px;
     }
-    @include mobile {
-      flex-direction: column;
-      // padding-bottom: 20px;
-    }
     @include desktop-large {
       padding-bottom: 170px;
     }
@@ -175,9 +165,7 @@ header {
         padding-left: 0;
       }
       @include mobile {
-        // order: 2;
         padding-top: 40px;
-        // padding-left: 0;
       }
       @include desktop-large {
         padding-top: 160px;
@@ -716,15 +704,14 @@ footer {
     .auth {
       @include auth();
       padding-left: 60px;
-      button {
-        @include button();
-      }
-
       @include tablet {
         // display: none;
         position: relative;
         right: 30px;
         padding-top: 22px;
+      }
+      button {
+        @include button();
       }
     }
   }

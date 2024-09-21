@@ -17,17 +17,12 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
-@media only screen and (max-width: 1300px) {
+@media (max-width: 1300px) {
   .wrapper {
     padding: 0;
   }
 }
 @media (max-width: 1024px) {
-  .wrapper {
-    padding: 0;
-  }
-}
-@media (max-width: 430px) {
   .wrapper {
     padding: 0;
   }
@@ -39,15 +34,12 @@ body {
 }
 
 header .navbar {
-  position: relative;
-  z-index: 101;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   padding: 18px 140px;
   position: relative;
-  z-index: 101;
 }
 @media (max-width: 1024px) {
   header .navbar {
@@ -182,11 +174,6 @@ header .hero-section {
   header .hero-section {
     flex-direction: column;
     padding-bottom: 20px;
-  }
-}
-@media (max-width: 430px) {
-  header .hero-section {
-    flex-direction: column;
   }
 }
 @media (min-width: 1440px) {
@@ -758,6 +745,13 @@ footer .copy-right .auth {
   font-size: 15px;
   padding-left: 60px;
 }
+@media (max-width: 768px) {
+  footer .copy-right .auth {
+    position: relative;
+    right: 30px;
+    padding-top: 22px;
+  }
+}
 footer .copy-right .auth button {
   padding: 13px 32px;
   border: none;
@@ -772,11 +766,4 @@ footer .copy-right .auth button:hover {
 }
 footer .copy-right .auth button:active {
   background-color: hsl(233, 8%, 62%);
-}
-@media (max-width: 768px) {
-  footer .copy-right .auth {
-    position: relative;
-    right: 30px;
-    padding-top: 22px;
-  }
 }/*# sourceMappingURL=global.css.map */
