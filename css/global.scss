@@ -49,9 +49,9 @@ header {
       display: none;
     }
 
-    @include mobile {
-      display: none;
-    }
+    // @include mobile {
+    //   display: none;
+    // }
     &.toggle {
       @include tablet {
         position: absolute;
