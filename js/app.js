@@ -1,17 +1,19 @@
 const hamburger = document.querySelector(".icon");
-const navLinks = document.querySelector(".navLinks");
-//Events
-icon.addEventListener("click", openMenu);
-navLinks.addEventListener("click", closeMenu);
+const menu = document.querySelector(".navLinks");
+//Event
+hamburger.addEventListener("click", handleOpen);
+//Fuction
+function handleOpen() {
+  // menu.style.display = "block";
+  menu.classList.toggle("toggle");
+}
+// hamburger.onclick = function () {
+//   console.log("clicked");
+//   menu.style.display = "block";
+// };
+// console.log(navLinks);
+// hamburger.style.backgroundColor = "red";
+// console.log(hamburger);
 
-//Fuctions
-function openMenu() {
-  navLinks.classList.remove("hide");
-  icon.src = "images/icon-close.svg";
-}
-function closeMenu() {
-  navLinks.classList.add("hide");
-  icon.src = "images/icon-hamburger.svg";
-}
-// console.log(closeMenu())
-// console.log(openMenu())
+// console.log(menu.classList.contains("toggle"));
+// console.log(menu.classList.toggle("toggle"));

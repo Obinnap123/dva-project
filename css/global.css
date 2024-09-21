@@ -39,11 +39,15 @@ body {
 }
 
 header .navbar {
+  position: relative;
+  z-index: 101;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   padding: 18px 140px;
+  position: relative;
+  z-index: 101;
 }
 @media (max-width: 1024px) {
   header .navbar {
@@ -60,7 +64,7 @@ header .navbar {
     padding: 18px 24px;
   }
 }
-header ul {
+header .navLinks {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,24 +73,42 @@ header ul {
   font-size: 15px;
 }
 @media (max-width: 768px) {
-  header ul {
+  header .navLinks {
     display: none;
   }
 }
-@media (max-width: 430px) {
-  header ul {
-    display: none;
+@media (max-width: 768px) {
+  header .navLinks.toggle {
+    position: absolute;
+    top: 75px;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    width: 90%;
+    border-radius: 6px;
+    text-align: center;
+    padding: 24px 0px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 18px;
+    z-index: 100;
   }
 }
-header ul li {
+header .navLinks li {
   list-style: none;
 }
-header ul li a {
+header .navLinks li a {
   text-decoration: none;
   color: hsl(233, 8%, 62%);
   position: relative;
 }
-header ul li a::after {
+@media (max-width: 768px) {
+  header .navLinks li a {
+    color: black;
+  }
+}
+header .navLinks li a::after {
   content: "";
   height: 3px;
   width: 100%;
@@ -97,15 +119,15 @@ header ul li a::after {
   bottom: -30px;
   opacity: 0;
 }
-header ul li a:hover::after, header ul li a:active::after {
+header .navLinks li a:hover::after, header .navLinks li a:active::after {
   opacity: 1;
   transition: all 0.2s;
   pointer-events: none;
 }
-header ul li a:visited {
+header .navLinks li a :visited {
   color: hsl(233, 8%, 62%);
 }
-header ul li a:hover, header ul li a:active {
+header .navLinks li a:hover, header .navLinks li a:active {
   color: black;
 }
 header .auth {
@@ -138,18 +160,16 @@ header .auth button:hover {
 header .auth button:active {
   background-color: hsl(233, 8%, 62%);
 }
-
-.hamburger {
+header .hamburger {
   display: none;
   cursor: pointer;
 }
 @media (max-width: 768px) {
-  .hamburger {
+  header .hamburger {
     display: block;
   }
 }
-
-.hero-section {
+header .hero-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -159,55 +179,55 @@ header .auth button:active {
   padding-bottom: 140px;
 }
 @media (max-width: 768px) {
-  .hero-section {
+  header .hero-section {
     flex-direction: column;
     padding-bottom: 20px;
   }
 }
 @media (max-width: 430px) {
-  .hero-section {
+  header .hero-section {
     flex-direction: column;
   }
 }
 @media (min-width: 1440px) {
-  .hero-section {
+  header .hero-section {
     padding-bottom: 170px;
   }
 }
-.hero-section .hero-section-one {
+header .hero-section .hero-section-one {
   padding-top: 130px;
   padding-left: 140px;
 }
 @media (max-width: 1024px) {
-  .hero-section .hero-section-one {
+  header .hero-section .hero-section-one {
     padding-top: 90px;
     padding-left: 70px;
   }
 }
 @media (max-width: 768px) {
-  .hero-section .hero-section-one {
+  header .hero-section .hero-section-one {
     order: 2;
     padding-top: 30px;
     padding-left: 0;
   }
 }
 @media (max-width: 430px) {
-  .hero-section .hero-section-one {
+  header .hero-section .hero-section-one {
     padding-top: 40px;
   }
 }
 @media (min-width: 1440px) {
-  .hero-section .hero-section-one {
+  header .hero-section .hero-section-one {
     padding-top: 160px;
   }
 }
-.hero-section .hero-section-one h1 {
+header .hero-section .hero-section-one h1 {
   font-size: 45px;
   font-weight: 300;
   width: 450px;
 }
 @media (max-width: 768px) {
-  .hero-section .hero-section-one h1 {
+  header .hero-section .hero-section-one h1 {
     text-align: center;
     width: 100%;
     text-wrap: nowrap;
@@ -215,20 +235,20 @@ header .auth button:active {
   }
 }
 @media (max-width: 430px) {
-  .hero-section .hero-section-one h1 {
+  header .hero-section .hero-section-one h1 {
     text-align: center;
     text-wrap: wrap;
     padding-top: 250px;
   }
 }
 @media (min-width: 1440px) {
-  .hero-section .hero-section-one h1 {
+  header .hero-section .hero-section-one h1 {
     width: 550px;
     font-weight: 300;
     font-size: 60px;
   }
 }
-.hero-section .hero-section-one p {
+header .hero-section .hero-section-one p {
   padding-top: 20px;
   color: hsl(233, 8%, 62%);
   font-size: 15px;
@@ -236,7 +256,7 @@ header .auth button:active {
   width: 380px;
 }
 @media (max-width: 768px) {
-  .hero-section .hero-section-one p {
+  header .hero-section .hero-section-one p {
     width: 90%;
     font-size: 14px;
     text-align: center;
@@ -245,31 +265,31 @@ header .auth button:active {
   }
 }
 @media (min-width: 1440px) {
-  .hero-section .hero-section-one p {
+  header .hero-section .hero-section-one p {
     width: 450px;
     font-size: 18px;
   }
 }
-.hero-section .hero-section-one .auth {
+header .hero-section .hero-section-one .auth {
   padding-top: 32px;
 }
 @media (max-width: 768px) {
-  .hero-section .hero-section-one .auth {
+  header .hero-section .hero-section-one .auth {
     display: block;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  .hero-section .hero-section-one .auth button {
+  header .hero-section .hero-section-one .auth button {
     padding: 13px 48px;
   }
 }
 @media (max-width: 430px) {
-  .hero-section .hero-section-one .auth button {
+  header .hero-section .hero-section-one .auth button {
     padding: 13px 32px;
   }
 }
-.hero-section .hero-img img {
+header .hero-section .hero-img img {
   width: 600px;
   position: absolute;
   right: 5px;
@@ -277,25 +297,25 @@ header .auth button:active {
   top: 0px;
 }
 @media (max-width: 1024px) {
-  .hero-section .hero-img img {
+  header .hero-section .hero-img img {
     width: 500px;
   }
 }
 @media (max-width: 768px) {
-  .hero-section .hero-img img {
+  header .hero-section .hero-img img {
     display: none;
   }
 }
 @media (min-width: 1440px) {
-  .hero-section .hero-img img {
+  header .hero-section .hero-img img {
     width: 700px;
   }
 }
-.hero-section .hero-img .mobile-image {
+header .hero-section .hero-img .mobile-image {
   display: none;
 }
 @media (max-width: 768px) {
-  .hero-section .hero-img .mobile-image {
+  header .hero-section .hero-img .mobile-image {
     display: block;
     width: 100%;
     order: 1;
@@ -616,7 +636,7 @@ footer .footer-div {
     margin: 0 auto;
   }
 }
-footer .socials {
+footer .footer-div .socials {
   display: flex;
   gap: 12px;
   width: 50px;
@@ -624,7 +644,7 @@ footer .socials {
   padding-top: 58px;
 }
 @media (max-width: 768px) {
-  footer .socials {
+  footer .footer-div .socials {
     padding-top: 24px;
     position: relative;
     left: 45%;
@@ -632,24 +652,24 @@ footer .socials {
   }
 }
 @media (max-width: 430px) {
-  footer .socials {
+  footer .footer-div .socials {
     padding-right: 140px;
   }
 }
-footer .socials .facebook .icon,
-footer .socials .youtube .icon,
-footer .socials .twitter .icon,
-footer .socials .pinterest .icon,
-footer .socials .instagram .icon {
+footer .footer-div .socials .facebook .icon,
+footer .footer-div .socials .youtube .icon,
+footer .footer-div .socials .twitter .icon,
+footer .footer-div .socials .pinterest .icon,
+footer .footer-div .socials .instagram .icon {
   width: 24px;
   height: 24px;
   transition: fill 0.3s ease;
 }
-footer .socials .facebook:hover .icon,
-footer .socials .youtube:hover .icon,
-footer .socials .twitter:hover .icon,
-footer .socials .pinterest:hover .icon,
-footer .socials .instagram:hover .icon {
+footer .footer-div .socials .facebook:hover .icon,
+footer .footer-div .socials .youtube:hover .icon,
+footer .footer-div .socials .twitter:hover .icon,
+footer .footer-div .socials .pinterest:hover .icon,
+footer .footer-div .socials .instagram:hover .icon {
   fill: hsl(136, 65%, 51%);
 }
 footer .footer-ul-one {
