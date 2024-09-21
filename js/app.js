@@ -2,11 +2,13 @@ const hamburger = document.querySelector(".icon");
 const menu = document.querySelector(".navLinks");
 //Event
 hamburger.addEventListener("click", handleOpen);
+
 //Fuction
 function handleOpen() {
   // menu.style.display = "block";
   menu.classList.toggle("toggle");
 }
+
 // hamburger.onclick = function () {
 //   console.log("clicked");
 //   menu.style.display = "block";
